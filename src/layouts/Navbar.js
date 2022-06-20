@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 export default function NavBar(){
     const [mainMenu, setMainMenu]=useState([]);
     useEffect(()=>{
+        let flag= true;
+    if(flag== true){
       const requestOptions = {
         method: 'GET',
         redirect: 'follow',
@@ -15,6 +17,8 @@ export default function NavBar(){
       fetch(url, requestOptions).then(response => response.json())
       .then(result => setMainMenu(result))
       .catch(error => console.log('error', error));
+
+    }return()=> { let flag= false;}
     })
     return (
         <div className="header-menu main-header-area">
@@ -26,9 +30,9 @@ export default function NavBar(){
                       <div className="menu-item">
                         <ul>
                              {mainMenu.map(m=>
-                                <li>
-                                  {console.log("navbar m",m)}
-                                <Link to={"/"+m.slug}>{m.title}</Link></li>
+                                <li key={m.id}>
+                                    <Link to={"/"+m.slug}>{m.title}</Link>
+                                </li>
                              )}
                         </ul>
                       </div>

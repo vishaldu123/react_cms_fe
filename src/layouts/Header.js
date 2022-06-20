@@ -1,9 +1,13 @@
 import React from "react";
+import Navbar from "./Navbar";
+
 import { Link } from 'react-router-dom';
+
+
 
 export default function Header(){
     return (
-    <div className="header-area">
+    <header className="header-area">
         <div className="container">
             <div className="top-header">
                 <ul className="left-item">
@@ -25,6 +29,7 @@ export default function Header(){
                 </ul>
             </div>
         </div>
-    </div>
+        <Navbar/>
+    </header>
     );
 }

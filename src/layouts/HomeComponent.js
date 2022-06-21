@@ -26,13 +26,8 @@ function HomeComponent() {
     <>
         <Header/>
         {homePage.map(m=>
-        <section key={m.id} class="h2-courses-area inarea-courses-area px-2">
-            {console.log("m",m)}
-            {m.position_text}
-        </section>
+          <div key={m.id} dangerouslySetInnerHTML={{ __html: m.position_text}} />
         )}
-        
-
         <Footer/>   
     </>
     );

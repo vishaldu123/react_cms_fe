@@ -30,7 +30,7 @@ export default function NavBar(){
                       <div className="menu-item">
                         <ul>
                              {mainMenu.map(m=>
-                                <li key={m.id}>
+                                <li key={m.page_id}>
                                     <Link to={"/"+m.slug}>{m.title}</Link>
                                 </li>
                              )}

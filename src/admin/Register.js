@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 
-import { Divider, Grid, Stack, Typography, useMediaQuery } from 'bootstrap';
+import { Button } from 'react-bootstrap';
 
 // project imports
 
@@ -11,8 +11,6 @@ import { Divider, Grid, Stack, Typography, useMediaQuery } from 'bootstrap';
 // ===============================|| AUTH3 - REGISTER ||=============================== //
 
 const Register = () => {
-    const theme = useTheme();
-    const matchDownSM = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import MainComponent from "./layouts/MainComponent";
 import HomeComponent from "./layouts/HomeComponent";
 import { BrowserRouter , Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 // Admin Routes
 import Login from "./admin/Login";
